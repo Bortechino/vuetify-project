@@ -1,14 +1,5 @@
 <template>
   <div>
-    <!--v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed temporary app>
-      <v-list-item title="Виктория Зарини" subtitle="Коуч"></v-list-item>
-      <v-divider></v-divider>
-      <v-list-item link title="Начало"></v-list-item>
-      <v-list-item link title="Онлайн продукты"></v-list-item>
-      <v-list-item link title="Услуги"></v-list-item>
-      <v-list-item link title="Контакты"></v-list-item>
-    </v-navigation-drawer-->
-
     <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed temporary app>
       <v-list>
         <v-list-item>
@@ -32,7 +23,7 @@
           <v-list-item-content>
             <v-list-item-title class="subtitile-1">{{
               text
-            }}</v-list-item-title>
+              }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
