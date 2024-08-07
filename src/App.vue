@@ -5,36 +5,14 @@
         <div>
 
           <v-container fluid id="front-container">
-            <v-app-bar app class="mb-16" color="transparent" width="75" clearable>
-              <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-              <v-app-bar-title>Виктория Зарини Коуч ICTA</v-app-bar-title>
-              <v-spacer></v-spacer>
-              <v-btn href="/index.html">
-                Начало
-              </v-btn>
-              <v-btn href="#curses">
-                Онлайн продукты
-              </v-btn>
-              <v-btn href="#">
-                Услуги
-              </v-btn>
-              <v-btn href="#contacts">
-                Контакты
-              </v-btn>
-            </v-app-bar>
-            <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
-              <v-list-item title="Виктория Зарини" subtitle="Коуч"></v-list-item>
-              <v-divider></v-divider>
-              <v-list-item link title="Начало"></v-list-item>
-              <v-list-item link title="Онлайн продукты"></v-list-item>
-              <v-list-item link title="Контакты"></v-list-item>
-            </v-navigation-drawer>
+            <navigation :color="color" :flat="flat" />
+
 
             <v-container id="card-container" class="  mt-8">
               <v-row justify="center" class="mt-8 " no-gutters>
                 <v-col cols="12" sm="6" md="4" lg="3" class="  mt-16" max-height>
-                  <v-card justify="center" align="ceter" width="100%" class="mx-auto my-8 rounded-xl h-90"
-                    color="brown-lighten-4" evalated="16">
+                  <v-card justify="center" align="ceter" width="100%" :class="{ 'zoom-efect': hover }"
+                    class="mx-auto my-8 rounded-xl h-90" color="brown-lighten-4" evalated="16">
                     <v-card-title class="text-h6 text-center   mt-8"
                       text-color="brown-darken-4">Менторинг</v-card-title>
                     <v-card-subtitle class="text-center text-h6 mt-8">Зaкажите сессию<br> сегодня</v-card-subtitle>
@@ -167,13 +145,9 @@ const drawer = ref(null)
 const dialog = ref(false)
 </script>
 
-<script>
-export default {
-  data: () => ({
-    drawer: null
-  }),
-}
-</script>
+
+
+
 
 <style scoped>
 * {
@@ -217,9 +191,12 @@ export default {
   align-items: center;
   justify-content: center;
 
+
 }
 
-
+.zoom-efect {
+  transform: scale(1.1);
+}
 
 
 
