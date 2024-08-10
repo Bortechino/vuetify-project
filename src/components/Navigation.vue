@@ -23,7 +23,7 @@
           <v-list-item-content>
             <v-list-item-title class="subtitile-1">{{
               text
-              }}</v-list-item-title>
+            }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -35,16 +35,19 @@
       <!--v-app-bar-nav-icon @click="drawer = !drawer" v-if="isXs" /-->
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="mr-4" v-if="isXs" />
       <div v-else>
-        <v-btn href="/index.html">
+        <v-btn to="/">
           Начало
         </v-btn>
-        <v-btn href="#curses">
+        <v-btn to="/about">
+          Обо мне
+        </v-btn>
+        <v-btn to="/web-product">
           Онлайн продукты
         </v-btn>
-        <v-btn href="#">
+        <v-btn to="/services">
           Услуги
         </v-btn>
-        <v-btn href="#contacts">
+        <v-btn to="/contacts">
           Контакты
         </v-btn>
 
@@ -71,11 +74,11 @@ export default {
     drawer: null,
     isXs: false,
     items: [
-      ["mdi-home-outline", "Начало", "/index.html"],
-      ["mdi-information-outline", "Обо мне", "#features"],
-      ["mdi-download-box-outline", "Онлайн продукты", "#download"],
-      ["mdi-currency-usd", "Услуги", "#pricing"],
-      ["mdi-email-outline", "Контакты", "#contact"],
+      ["mdi-home-outline", "Начало", "/"],
+      ["mdi-information-outline", "Обо мне", "/about"],
+      ["mdi-download-box-outline", "Онлайн продукты", "/web-product"],
+      ["mdi-currency-usd", "Услуги", "/services"],
+      ["mdi-email-outline", "Контакты", "/contact"],
     ],
   }),
   props: {
