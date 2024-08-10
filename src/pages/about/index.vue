@@ -9,6 +9,30 @@
             <v-container id="card-container" class="  mt-8">
               <cards2 />
             </v-container>
+            <v-container fluid id="serts">
+              <v-row>
+                <v-col cols="12" sm="6" md="4" class="mb-4">
+                  <v-sheet><v-img src="@/assets/VZarini.png" /> </v-sheet>
+                </v-col>
+                <v-col cols="12" sm="6" md="4" class="mb-4">
+                  <v-sheet><v-sheet><v-img src="@/assets/2.png" /> </v-sheet></v-sheet>
+                </v-col>
+                <v-col cols="12" sm="6" md="4" class="mb-4">
+                  <v-sheet><v-sheet><v-img src="@/assets/3.png" /> </v-sheet></v-sheet>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12" sm="6" md="4" class="mb-4">
+                  <v-sheet><v-img src="@/assets/4.png" /> </v-sheet>
+                </v-col>
+                <v-col cols="12" sm="6" md="4" class="mb-4">
+                  <v-sheet><v-sheet><v-img src="@/assets/5.png" /> </v-sheet></v-sheet>
+                </v-col>
+                <v-col cols="12" sm="6" md="4" class="mb-4">
+                  <v-sheet><v-sheet><v-img src="@/assets/1.png" /> </v-sheet></v-sheet>
+                </v-col>
+              </v-row>
+            </v-container>
 
           </v-container>
 
@@ -23,6 +47,7 @@
 </template>
 
 <script setup>
+
 import navigation from "@/components/Navigation";
 import foote from "@/components/Footer";
 import cards from "@/components/Cards.vue";
@@ -30,8 +55,10 @@ import cards2 from "@/components/Cards2.vue";
 import {
   ref
 } from 'vue'
+
 const drawer = ref(null)
 const dialog = ref(false)
+
 </script>
 
 <script>
