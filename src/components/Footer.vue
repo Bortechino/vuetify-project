@@ -1,6 +1,8 @@
 <template>
-  <v-footer dark padless>
-    <v-card flat tile class="secondary white--text text-center">
+  <v-footer dark padless align-center>
+    <img src="@/assets/stamp.png" alt="stamp" />
+    <v-card id="foot" flat tile class="secondary white--text text-center align-center ">
+
       <v-card-text>
         <v-btn v-for="(icon, i) in icons" :key="i" class="mx-4 white--text" :href="icon.link" target="_blank" icon>
           <v-icon size="24px">{{ icon.text }}</v-icon>
@@ -31,22 +33,29 @@ export default {
   data: () => ({
     icons: [
       {
-        text: "mdi-facebook",
+        text: "fa-brands fa-facebook",
         link: "",
       },
       {
-        text: "(='X'=)",
+        text: "fa-brands fa-x-twitter",
         link: "",
       },
       {
-        text: "mdi-linkedin",
+        text: "fa-brands fa-linkedin",
         link: "",
       },
       {
-        text: "mdi-instagram",
+        text: "fa-brands fa-instagram",
         link: "https://instagram.com/joabson_arley/",
       },
     ],
   }),
 };
+
+
 </script>
+<style>
+#foot {
+  justify-content: center;
+}
+</style>

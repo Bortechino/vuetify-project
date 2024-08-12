@@ -1,11 +1,13 @@
 <template>
     <v-app id="inspire">
         <v-main>
-            <v-img :aspect-ratio="2" src="@/assets/unsplash-image-DJ7bWa-Gwks.jpg" cover>
+            <v-img :aspect-ratio="2" src="@/assets/image-asset.jpeg" cover>
                 <div>
 
                     <v-container fluid id="front-container">
                         <navigation :color="color" :flat="flat" />
+
+
                         <v-container id="card-container" class="  mt-8">
                             <cards />
                         </v-container>
@@ -13,6 +15,12 @@
                     </v-container>
 
                 </div>
+
+
+                <v-container id="about-container" class="  mt-2  " color="transparent">
+
+
+                </v-container>
             </v-img>
         </v-main>
 
@@ -25,8 +33,8 @@
 <script setup>
 import navigation from "@/components/Navigation";
 import foote from "@/components/Footer";
-import cards from "@/components/Cards.vue";
-import cards2 from "@/components/Cards2.vue";
+import cards from "@/components/Cards_Web.vue";
+
 import {
     ref
 } from 'vue'
@@ -35,10 +43,7 @@ const dialog = ref(false)
 </script>
 
 <script>
-/*import navigation from "./components/Navigation";
-import foote from "./components/Footer";
-import cards from "./components/Cards.vue";
-import cards2 from "./components/Cards2.vue";*/
+
 
 export default {
     name: "App",
@@ -47,7 +52,7 @@ export default {
         navigation,
         foote,
         cards,
-        cards2,
+
 
     },
 
@@ -89,10 +94,6 @@ export default {
     justify-content: center;
 
 
-}
-
-.zoom-efect {
-    transform: scale(1.1);
 }
 
 @media (max-width: 850px) {

@@ -2,9 +2,9 @@
   <div>
     <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed temporary app>
       <v-list>
-        <v-list-item>
-          <v-list-item-avatar>
-            <img src="@/assets/favicon/apple-touch-icon.png" alt="Logo" />
+        <v-list-item class="justify-center">
+          <v-list-item-avatar class="justify-center">
+            <img src="@/assets/stamp.png" :width="50" alt="Logo" />
           </v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title class="title">Виктория Зарини</v-list-item-title>
@@ -16,7 +16,8 @@
       <v-divider />
 
       <v-list dense>
-        <v-list-item v-for="([icon, text, link], i) in items" :key="i" link @click="$vuetify.goTo(link)">
+        <!--v-list-item v-for="([icon, text, link], i) in items" :key="i" link @click="$vuetify.goTo(link)"-->
+        <v-list-item v-for="([icon, text, link], i) in items" :key="i" :to="link">
           <v-list-item-icon class="justify-center">
             <v-icon>{{ icon }}</v-icon>
           </v-list-item-icon>
@@ -74,11 +75,11 @@ export default {
     drawer: null,
     isXs: false,
     items: [
-      ["mdi-home-outline", "Начало", "/"],
-      ["mdi-information-outline", "Обо мне", "/about"],
-      ["mdi-download-box-outline", "Онлайн продукты", "/web-product"],
-      ["mdi-currency-usd", "Услуги", "/services"],
-      ["mdi-email-outline", "Контакты", "/contact"],
+      ["fa fa-home", "Начало", "/"],
+      ["fa fa-circle-info", "Обо мне", "/about"],
+      ["fa fa-download", "Онлайн продукты", "/web-product"],
+      ["fa fa-hand-holding-dollar", "Услуги", "/services"],
+      ["fa fa-envelope", "Контакты", "/contacts"],
     ],
   }),
   props: {

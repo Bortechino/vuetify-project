@@ -56,8 +56,8 @@
 
 	<v-row justify="space-around" class="mt-8" no-gutters>
 		<v-col v-for="service in services" :key="service.title" cols="12" sm="6" md="4" lg="3" class="mt-16" max-height>
-			<v-card justify="center" align="center" width="100%" :class="{ 'zoom-effect': hover }"
-				class="mx-auto my-8 rounded-xl h-90" color="brown-lighten-4" evalated="16">
+			<v-card justify="center" align="center" width="100%" class="mx-auto my-8 rounded-xl h-90"
+				color="brown-lighten-4" evalated="16">
 				<v-card-title class="text-h6 text-center mt-8" text-color="brown-darken-4">{{ service.title
 					}}</v-card-title>
 				<v-card-subtitle class="text-center roboto-condensed text-subtitle-1 mt-8">{{ service.subtitle

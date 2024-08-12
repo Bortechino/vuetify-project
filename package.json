@@ -16,6 +16,11 @@
     "vuetify": "^3.6.11"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
     "@types/cors": "^2.8.17",
     "@vitejs/plugin-vue": "^5.0.5",
     "eslint": "^8.57.0",
