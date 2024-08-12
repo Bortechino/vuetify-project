@@ -32,8 +32,12 @@
 
 
     <v-app-bar app class="mb-16" scroll-behavior="elevate fade-image inverted" color="transparent" width="75" clearable>
+      <v-toolbar-title :width="60">
+        <v-img src="@/assets/stamp.png" max-width="50px" />
+      </v-toolbar-title>
       <v-app-bar-title>Виктория Зарини Коуч ICTA</v-app-bar-title>
       <!--v-app-bar-nav-icon @click="drawer = !drawer" v-if="isXs" /-->
+      <v-spacer />
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="mr-4" v-if="isXs" />
       <div v-else>
         <v-btn to="/">
