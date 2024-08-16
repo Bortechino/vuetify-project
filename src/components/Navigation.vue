@@ -32,27 +32,26 @@
 
 
     <v-app-bar app class="mb-16" scroll-behavior="elevate fade-image inverted" color="transparent" width="75" clearable>
-      <v-toolbar-title :width="60">
-        <v-img src="@/assets/stamp.png" max-width="50px" />
-      </v-toolbar-title>
-      <v-app-bar-title>Виктория Зарини Коуч ICTA</v-app-bar-title>
+
+      <v-img src="@/assets/stamp.png" max-width="50px" contain /><v-app-bar-title>Виктория Зарини Коуч
+        ICTA</v-app-bar-title>
       <!--v-app-bar-nav-icon @click="drawer = !drawer" v-if="isXs" /-->
-      <v-spacer />
+
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="mr-4" v-if="isXs" />
       <div v-else>
         <v-btn to="/">
           Начало
         </v-btn>
-        <v-btn to="/about">
+        <v-btn to="/About">
           Обо мне
         </v-btn>
-        <v-btn to="/web-product">
+        <v-btn to="/WebProduct">
           Онлайн продукты
         </v-btn>
-        <v-btn to="/services">
+        <v-btn to="/Services">
           Услуги
         </v-btn>
-        <v-btn to="/contacts">
+        <v-btn to="/Contacts">
           Контакты
         </v-btn>
 
@@ -80,10 +79,10 @@ export default {
     isXs: false,
     items: [
       ["fa fa-home", "Начало", "/"],
-      ["fa fa-circle-info", "Обо мне", "/about"],
-      ["fa fa-download", "Онлайн продукты", "/web-product"],
-      ["fa fa-hand-holding-dollar", "Услуги", "/services"],
-      ["fa fa-envelope", "Контакты", "/contacts"],
+      ["fa fa-circle-info", "Обо мне", "/About"],
+      ["fa fa-download", "Онлайн продукты", "/WebProduct"],
+      ["fa fa-hand-holding-dollar", "Услуги", "/Services"],
+      ["fa fa-envelope", "Контакты", "/Contacts"],
     ],
   }),
   props: {

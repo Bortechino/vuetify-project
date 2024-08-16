@@ -1,6 +1,8 @@
 // Styles
 
 import 'vuetify/styles'
+import { md3 } from 'vuetify/blueprints'
+
 
 // Vuetify
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -13,6 +15,7 @@ import { aliases, fa } from 'vuetify/iconsets/fa'
 
 export default createVuetify({
   // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
+  blueprint: md3,
   icons: {
     defaultSet: 'fa',
     aliases,

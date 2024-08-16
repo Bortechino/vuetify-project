@@ -1,8 +1,8 @@
 <template>
-  <v-footer dark padless align-center>
-    <img src="@/assets/stamp.png" alt="stamp" />
-    <v-card id="foot" flat tile class="secondary white--text text-center align-center ">
+  <v-footer dark padless align-center class="text-center align-center justify-center ">
 
+    <v-card id="foot" flat tile class="secondary white--text text-center align-center justify-center ">
+      <img src="@/assets/stamp.png" alt="stamp" />
       <v-card-text>
         <v-btn v-for="(icon, i) in icons" :key="i" class="mx-4 white--text" :href="icon.link" target="_blank" icon>
           <v-icon size="24px">{{ icon.text }}</v-icon>
