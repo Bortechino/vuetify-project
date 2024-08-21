@@ -1,4 +1,7 @@
 // vite.config.js
+import vue from '@vitejs/plugin-vue'
+import vuetify from 'vite-plugin-vuetify'
+
 import {
   resolve
 } from 'path'
@@ -6,10 +9,18 @@ import {
   defineConfig
 } from 'vite'
 
+
+
+
+
 export default defineConfig
   ({
-    build
-      : {
+    plugins: [
+      vue(),
+      vuetify(),
+    ],
+
+    build: {
       rollupOptions
         : {
         input
