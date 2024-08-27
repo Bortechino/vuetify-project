@@ -16,7 +16,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text text-center align-center justify-center">
-        {{ new Date().getFullYear() }} — <strong>Zarini</strong>
+        &COPY;{{ new Date().getFullYear() }} — <strong>Zarini</strong>
       </v-card-text>
     </v-card>
   </v-footer>
