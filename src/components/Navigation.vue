@@ -24,7 +24,7 @@
           <v-list-item-content>
             <v-list-item-title class="subtitile-1">{{
               text
-            }}</v-list-item-title>
+              }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>

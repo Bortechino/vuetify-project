@@ -7,6 +7,7 @@
                         <navigation :color="color" :flat="flat" />
                         <div class="container">
                             <!-- ... -->
+                            <h2>Задайте мне вопрос</h2>
                             <form @submit.prevent="sendEmail" @verify="onVerify">
                                 <label>Имя</label>
                                 <input type="text" v-model="name" name="name" placeholder="Ваше имя" required>

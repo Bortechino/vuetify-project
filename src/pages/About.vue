@@ -7,7 +7,7 @@
           <v-container fluid id="front-container">
             <navigation :color="color" :flat="flat" />
             <v-container id="card-container" class="  mt-8">
-              <cards2 />
+              <cards_about />
             </v-container>
             <v-container fluid id="serts">
               <v-row>
@@ -51,7 +51,7 @@
 import navigation from "@/components/Navigation";
 import foote from "@/components/Footer";
 import cards from "@/components/Cards.vue";
-import cards2 from "@/components/Cards2.vue";
+import cards_about from "@/components/Cards_about.vue";
 import {
   ref
 } from 'vue'
@@ -74,7 +74,7 @@ export default {
     navigation,
     foote,
     cards,
-    cards2,
+    cards_about,
 
   },
 
