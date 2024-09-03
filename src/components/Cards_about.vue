@@ -15,7 +15,8 @@
         <v-spacer></v-spacer>
 
         <v-col cols="12" sm="6" md="6" lg="3" class="mt-8">
-            <v-sheet><v-img :width="300" aspect-ratio="16/9" class="mx-auto" :src="_imports_0" alt="Photo" /></v-sheet>
+            <v-sheet class="mx-auto text-xs-center border rounded-xl"><v-img :width="300" aspect-ratio="16/9"
+                    class="mx-auto" :src="_imports_0" alt="Photo" /></v-sheet>
             <!--v-card color="brown-lighten-4" elevated="16" class="ma-3 text-xs-center rounded-xl">
         <v-img :width="300" aspect-ratio="16/9" class="mx-auto" :src="_imports_0" alt="Photo" />
 
