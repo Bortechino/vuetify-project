@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center" class="mt-2" no-gutters>
-    <v-col cols="12" sm="6" md="6" lg="8" class="mt-2">
+    <v-col cols="16" sm="6" md="6" lg="8" class="mt-2">
       <v-card class="mx-auto my-8 h-90 rounded-xl" color="brown-lighten-4" elevated="16">
         <v-card-title class="text-h6 text-center mt-8" text-color="brown-darken-4">
           {{ titles }}
@@ -14,7 +14,7 @@
     </v-col>
     <v-spacer></v-spacer>
 
-    <v-col cols="12" sm="6" md="6" lg="3" class="mt-8">
+    <v-col cols="32" sm="6" md="6" lg="3" class="mt-8">
 
       <v-card color="brown-lighten-4" elevated="16" class="ma-3 text-xs-center rounded-xl">
         <v-img :width="300" aspect-ratio="16/9" class="mx-auto" :src="_imports_0" alt="Photo" />
