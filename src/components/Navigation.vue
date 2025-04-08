@@ -24,7 +24,7 @@
           <v-list-item-content>
             <v-list-item-title class="subtitile-1">{{
               text
-              }}</v-list-item-title>
+            }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -51,9 +51,9 @@
         <v-btn to="/Services">
           Услуги
         </v-btn>
-        <v-btn to="/Contacts">
+        <!--v-btn to="/Contacts">
           Контакты
-        </v-btn>
+        </v-btn-->
 
       </div>
     </v-app-bar>

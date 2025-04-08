@@ -41,6 +41,10 @@ const router = createRouter({
     path: '/Services',
     name: 'services',
     component: Services,
+  },
+  {
+    path: '/assets',
+    name: 'assets',
   },],
 })
 

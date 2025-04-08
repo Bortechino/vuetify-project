@@ -3,7 +3,7 @@
 	<v-container fluid id="card-container" class="  mt-8 align-center justify-center">
 		<v-divider class="mx-2" vertical></v-divider>
 		<v-row>
-			<v-col cols="12" sm="6" md="6" class="mb-4">
+			<v-col cols="12" sm="12" md="12" lg="6" class="mb-4">
 				<v-card class="mx-auto my-8 rounded-xl h-90" max-width="800" outlined justify="center" align="center"
 					width="100%" color="brown-lighten-4" evalated="16">
 					<v-card-title class="text-lg-center">
@@ -38,7 +38,7 @@
 				</v-card>
 			</v-col>
 			<v-spacer></v-spacer>
-			<v-col cols="12" sm="6" md="6" class="mb-4">
+			<v-col cols="12" sm="12" md="12" lg="6" class="mb-4">
 				<v-card class="mx-auto my-8 rounded-xl h-90" max-width="800" outlined justify="center" align="center"
 					width="100%" color="brown-lighten-4" evalated="16">
 					<v-card-title class="text-lg-center">

@@ -9,7 +9,7 @@
 
 
                         <v-container id="card-container" class="  mt-8">
-                            <cards />
+                            <cards2 />
                         </v-container>
 
                     </v-container>
@@ -18,7 +18,7 @@
 
 
                 <v-container id="about-container" class="  mt-2  " color="transparent">
-                    <cards2 />
+                    <cards />
                     <!--v-row justify="center" class="mt-2 " no-gutters>
   
               <v-col cols="12" sm="6" md="6" lg="8" class="  mt-2" max-height>

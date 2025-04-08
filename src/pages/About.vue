@@ -2,91 +2,75 @@
   <v-app id="inspire">
     <v-main>
       <v-img :aspect-ratio="2" src="@/assets/unsplash-image-DJ7bWa-Gwks.jpg" cover>
-        <div>
-
-          <v-container fluid id="front-container">
-            <navigation :color="color" :flat="flat" />
-            <v-container id="card-container" class="  mt-8">
-              <cards_about />
-            </v-container>
-            <v-container fluid id="serts">
-              <v-row>
-                <v-col cols="12" sm="6" md="4" class="mb-4">
-                  <v-sheet><v-img src="@/assets/VZarini.png" /> </v-sheet>
-                </v-col>
-                <v-col cols="12" sm="6" md="4" class="mb-4">
-                  <v-sheet><v-sheet><v-img src="@/assets/2.png" /> </v-sheet></v-sheet>
-                </v-col>
-                <v-col cols="12" sm="6" md="4" class="mb-4">
-                  <v-sheet><v-sheet><v-img src="@/assets/3.png" /> </v-sheet></v-sheet>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="12" sm="6" md="4" class="mb-4">
-                  <v-sheet><v-img src="@/assets/4.png" /> </v-sheet>
-                </v-col>
-                <v-col cols="12" sm="6" md="4" class="mb-4">
-                  <v-sheet><v-sheet><v-img src="@/assets/5.png" /> </v-sheet></v-sheet>
-                </v-col>
-                <v-col cols="12" sm="6" md="4" class="mb-4">
-                  <v-sheet><v-sheet><v-img src="@/assets/1.png" /> </v-sheet></v-sheet>
-                </v-col>
-              </v-row>
-            </v-container>
-
+        <v-container fluid id="front-container">
+          <navigation :color="color" :flat="flat" />
+          <v-container id="card-container" class="mt-8">
+            <cards-about />
           </v-container>
+          <v-container>
+            <v-card class="mx-auto my-8 h-90 rounded-xl" width="550" high="350" max-width="550" max-height="350"
+              color="brown-lighten-4" elevated="16">
+              <v-sheet class="mx-auto text-xs-center border rounded-xl" border="lg opacity-12" max-width="550"
+                max-height="350">
+                <v-carousel id="about-carousel" :continuous="false" :show-arrows="false" delimiter-icon="mdi-square"
+                  height="auto" hide-delimiter-background cycle multiple>
+                  <v-carousel-item v-for="(item, i) in carouselItems" :key="i" :src="item.src" cover height="auto"
+                    style="image-rendering: auto;"></v-carousel-item>
 
-        </div>
+                </v-carousel>
+              </v-sheet>
+            </v-card>
+          </v-container>
+        </v-container>
+
+
+
       </v-img>
     </v-main>
-
-
-
-    <foote />
+    <app-footer />
   </v-app>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import Navigation from "@/components/Navigation.vue"
+import AppFooter from "@/components/Footer.vue"
+import CardsAbout from "@/components/Cards_about.vue"
+import _imports_s0 from '@/assets/VZarini.png'
+import _imports_s1 from '@/assets/1.png'
+import _imports_s2 from '@/assets/2.png'
+import _imports_s3 from '@/assets/3.png'
+import _imports_s4 from '@/assets/4.png'
+import _imports_s5 from '@/assets/image1.png'
 
-import navigation from "@/components/Navigation";
-import foote from "@/components/Footer";
-import cards from "@/components/Cards.vue";
-import cards_about from "@/components/Cards_about.vue";
-import {
-  ref
-} from 'vue'
+const color = ref("")
+const flat = ref(null)
 
-const drawer = ref(null)
-const dialog = ref(false)
-
+const carouselItems = [
+  { src: _imports_s0, },// <--- import image here
+  { src: _imports_s1, },
+  { src: _imports_s2, },
+  { src: _imports_s3, },
+  { src: _imports_s4, },
+  { src: _imports_s5, },
+]
 </script>
-
-<script>
-/*import navigation from "./components/Navigation";
-import foote from "./components/Footer";
-import cards from "./components/Cards.vue";
-import cards2 from "./components/Cards2.vue";*/
-
+<!--script>
 export default {
-  name: "App",
-
-  components: {
-    navigation,
-    foote,
-    cards,
-    cards_about,
-
-  },
-
-  data: () => ({
-    fab: null,
-    color: "",
-    flat: null,
-  }),
-};
-
-</script>
-
+  data() {
+    return {
+      carouselItems: [
+        { src: _imports_s0, },// <--- import image here
+        { src: _imports_s1, },
+        { src: _imports_s2, },
+        { src: _imports_s3, },
+        { src: _imports_s4, },
+        { src: _imports_s5, },
+      ]
+    }
+  }
+} */
+</script -->
 
 
 <style scoped>
@@ -94,16 +78,8 @@ export default {
   font-family: 'Lato', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#bg-image {
-  aspect-ratio: 1;
-  background-image: url("./assets/jess-bailey-q10VITrVYUM-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 #card-container {
   width: 100%;
-
 }
 
 .v-card-title {
@@ -114,17 +90,23 @@ export default {
   min-height: 90%;
   align-items: center;
   justify-content: center;
-
-
 }
 
-.zoom-efect {
+.zoom-effect {
   transform: scale(1.1);
+}
+
+#about-carousel {
+  width: 100%;
+}
+
+#about-carousel image {
+  width: 100%;
+  height: inherit;
 }
 
 @media (max-width: 850px) {
   .v-card {
-
     margin: 8px;
     gap: 10px;
   }
